@@ -8,39 +8,79 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-      backgroundColor: Colors.teal,
-      body: SafeArea(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Container(
-              width: 100,
-              color: Colors.red,
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.yellow,
+      home: Scaffold(
+        backgroundColor: Colors.blue.shade700,
+        body: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/Me.png'),
+              ),
+              Text(
+                'Dario Vogogna',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Ceviche One',
+                  fontSize: 50.0,
                 ),
-                Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.lightGreen,
+              ),
+              Text(
+                'FRONTEND DEVELOPER',
+                style: TextStyle(
+                  color: Colors.amber,
+                  fontFamily: 'Fredericka the Great',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2.5,
                 ),
-              ],
-            ),
-            Container(
-              width: 100,
-              color: Colors.blue,
-            ),
-          ],
+              ),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.blue,
+                  ),
+                  title: Text(
+                    '+39 311 09878932',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.blue,
+                  ),
+                  title: Text(
+                    'dario.vogogna@myemail.com',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
-    ));
+    );
   }
 }
